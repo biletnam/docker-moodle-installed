@@ -14,9 +14,12 @@ RUN { \
 		echo 'upload_max_filesize = 80M'; \
 	} > /usr/local/etc/php/conf.d/moodle-recommended.ini
 	
+ADD crontab /etc/cron.d/moodle-cron
+RUN chmod 0644 /etc/cron.d/moodle-cron
+RUN chown www-data: /etc/cron.d/moodle-cron
+RUN touch /var/log/cron.log
+	
 VOLUME /var/www/moodledata
 VOLUME /var/www/html
 
 CMD ["apache2-foreground"]
-	
-	
