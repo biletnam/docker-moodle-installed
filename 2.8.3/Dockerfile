@@ -12,7 +12,6 @@ RUN { \
 		echo 'memory_limit = 40M'; \
 		echo 'post_max_size = 80M'; \
 		echo 'upload_max_filesize = 80M'; \
-		echo 'upload_max_filesize = 80M'; \
 	} > /usr/local/etc/php/conf.d/moodle-recommended.ini
 	
 VOLUME /var/moodledata
