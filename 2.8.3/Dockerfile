@@ -1,5 +1,5 @@
 FROM php:5.6-apache
-MAINTAINER Coordenadoria de Tecnologia da Informação <ccti@quixada.ufc.br>
+MAINTAINER Coordenadoria de Tecnologia da Informação - Quixadá <ccti@quixada.ufc.br>
 
 RUN apt-get update && \
 	apt-get -y install mysql-client pwgen python-setuptools curl git unzip apache2 libapache2-mod-php5 \ 
