@@ -14,7 +14,7 @@ RUN { \
 		echo 'upload_max_filesize = 80M'; \
 	} > /usr/local/etc/php/conf.d/moodle-recommended.ini
 	
-VOLUME /var/moodledata
+VOLUME /var/www/moodledata
 VOLUME /var/www/html
 
 CMD ["apache2-foreground"]
