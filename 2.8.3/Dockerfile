@@ -2,9 +2,10 @@ FROM php:5.6-apache
 MAINTAINER Coordenadoria de Tecnologia da Informação - Quixada <ccti@quixada.ufc.br>
 
 RUN apt-get update && \
-	apt-get -y install mysql-client pwgen python-setuptools curl git unzip libapache2-mod-php5 \ 
-	postfix wget supervisor curl libcurl3 libcurl3-dev git-core \
-	&& docker-php-ext-install gd pgsql curl xmlrpc intl mysql
+	apt-get -y install libpng12-dev libjpeg-dev zip unzip \ 
+	postfix wget supervisor curl libcurl3 libcurl3-dev \
+	&& rm -rf /var/lib/apt/lists/* \
+	&& docker-php-ext-install gd pgsql curl xmlrpc intl mysqli
 	
 # set recommended PHP.ini settings
 # see https://docs.moodle.org/28/en/Installing_Moodle_on_Debian_based_distributions
