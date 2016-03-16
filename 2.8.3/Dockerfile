@@ -3,7 +3,7 @@ MAINTAINER Coordenadoria de Tecnologia da Informação - Quixada <ccti@quixada.u
 
 RUN apt-get update && \
 	apt-get -y install mysql-client pwgen python-setuptools curl git unzip libapache2-mod-php5 \ 
-	postfix wget supervisor curl libcurl3	libcurl3-dev git-core
+	postfix wget supervisor curl libcurl3 libcurl3-dev git-core \
 	&& docker-php-ext-install gd pgsql curl xmlrpc intl mysql
 	
 # set recommended PHP.ini settings
