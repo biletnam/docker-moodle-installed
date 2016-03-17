@@ -1,4 +1,5 @@
 FROM php:5.6-apache
+
 MAINTAINER Coordenadoria de Tecnologia da Informação - Quixada <ccti@quixada.ufc.br>
 
 RUN apt-get update && \
