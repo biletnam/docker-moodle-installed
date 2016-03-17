@@ -5,7 +5,8 @@ RUN apt-get update && \
 	apt-get -y install libpng12-dev libjpeg-dev zip unzip \ 
 	postfix wget supervisor curl libcurl3 libcurl3-dev \
 	&& rm -rf /var/lib/apt/lists/* \
-	&& docker-php-ext-install gd pgsql curl xmlrpc intl mysqli
+	&& docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr \
+	&& docker-php-ext-install gd curl xmlrpc intl mysqli
 	
 # set recommended PHP.ini settings
 # see https://docs.moodle.org/28/en/Installing_Moodle_on_Debian_based_distributions
