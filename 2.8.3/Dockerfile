@@ -5,7 +5,8 @@ MAINTAINER Coordenadoria de Tecnologia da Informação - Quixada <ccti@quixada.u
 RUN apt-get update && \
 	apt-get -y install libpng12-dev libjpeg-dev zip unzip \
 	&& rm -rf /var/lib/apt/lists/* \
-	&& docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr --with-libxml-dir=/usr \
+	&& docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr \
+	&& docker-php-ext-configure xmlrp --with-libxml-dir=/usr \
 	&& docker-php-ext-install gd xmlrpc intl mysqli
 	
 # set recommended PHP.ini settings
