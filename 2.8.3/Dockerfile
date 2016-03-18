@@ -3,7 +3,7 @@ FROM php:5.6-apache
 MAINTAINER Coordenadoria de Tecnologia da Informação - Quixada <ccti@quixada.ufc.br>
 
 RUN apt-get update && \
-	apt-get -y install libpng12-dev libjpeg-dev zip unzip \
+	apt-get -y install libpng12-dev libjpeg-dev zip unzip libxml2-dev \
 	&& rm -rf /var/lib/apt/lists/* \
 	&& docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr \
 	&& docker-php-ext-configure xmlrpc --with-libxml-dir=/usr \
