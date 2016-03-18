@@ -3,8 +3,7 @@ FROM php:5.6-apache
 MAINTAINER Coordenadoria de Tecnologia da Informação - Quixada <ccti@quixada.ufc.br>
 
 RUN apt-get update && \
-	apt-get -y install libpng12-dev libjpeg-dev zip unzip \ 
-	postfix wget supervisor curl libcurl3 libcurl3-dev \
+	apt-get -y install libpng12-dev libjpeg-dev zip unzip \
 	&& rm -rf /var/lib/apt/lists/* \
 	&& docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr \
 	&& docker-php-ext-install gd curl xmlrpc intl mysqli
