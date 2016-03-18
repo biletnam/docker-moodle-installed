@@ -14,8 +14,8 @@ RUN apt-get update && \
 # see https://docs.moodle.org/28/en/Installing_Moodle_on_Debian_based_distributions
 RUN { \
 		echo 'memory_limit = 40M'; \
-		echo 'post_max_size = 80M'; \
-		echo 'upload_max_filesize = 80M'; \
+		echo 'post_max_size = 100M'; \
+		echo 'upload_max_filesize = 100M'; \
 	} > /usr/local/etc/php/conf.d/moodle-recommended.ini
 	
 ADD crontab /etc/cron.d/moodle-cron
